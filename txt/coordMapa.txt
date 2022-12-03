@@ -1,0 +1,72 @@
+Coordenadas Linea 2
+
+    751, 353
+    None
+    787, 392
+    None
+    824, 428
+    Attiki
+    824, 468
+    None
+    824, 500
+    None
+    866, 522
+    Omonia
+    888, 542
+    None
+    910, 560
+    None
+    912, 607
+    None
+    914, 641
+    None
+    914, 676
+    None
+    912, 710
+    None
+    913, 744
+    None
+    913, 778
+    None
+
+Coordenadas linea 3
+    681, 463
+    None
+    729, 513
+    None
+    768, 550
+    None
+    866, 560
+    Monastiraki
+    910, 561
+    None
+    984, 561
+    None
+    1046, 550
+    None
+    1067, 528
+    None
+    1088, 507
+    None
+    1108, 487
+    None
+    1127, 467
+    None
+    1149, 445
+    None
+    1170, 425
+    None
+    1189, 405
+    None
+    1209, 384
+    None
+    1243, 352
+    None
+    1298, 375
+    None
+    1298, 429
+    None
+    1298, 551
+    None
+    1370, 580
+    None

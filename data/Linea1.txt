@@ -1,0 +1,25 @@
+(101-102): Piraeus-Faliro = 2 km
+(102-103): Faliro-Moschato = 2 km
+(103-104): Moschato-Kallithea = 1.6 km
+(104-105): Kallithea-Tavros = 0.570 km
+(105-106): Tavros-Petralona = 0.810 km
+(106-107): Petralona-Thissio = 1.6 km
+(107-108): Thissio-Monastiraki = 0.530 km
+(108-109): Monastiraki-Omonia = 0.860 km
+(109-110): Omonia-Victoria = 1.1 km
+(110-111): Victoria-Attiki = 1.1 km
+(111-112): Attiki-Aghios Nikolaos = 1 km
+(112-113): Aghios Nikolaos-Kato Patissia = 0.580 km
+(113-114): Kato Patissia-Aghios Eleftherios = 0.980 km
+(114-115): Aghios Eleftherios-Ano Patissia = 0.520 km
+(115-116): Ano Patissia-Perissos = 1.3 km
+(116-117): Perissos-Pefkakia = 0.680 km
+(117-118): Pefkakia-Nea Ionia = 0.680 km
+(118-119): Nea Ionia-Iraklio = 1.3 km
+(119-120): Iraklio-Irini = 1.5 km
+(120-121): Irini-Neratziotissa = 1 km
+(121-122): Neratziotissa-Maroussi = 1.7 km
+(122-123): Maroussi-KAT = 1.1 km
+(123-124): KAT-Kifissia = 1.1 km
+
+Fuente: https://www.rome2rio.com/
