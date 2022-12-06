@@ -1,0 +1,9 @@
+Coste de transbordos
+
+(108v-108a): Moschato-Kallithea = 0.2 km
+(109v-109r): Faliro-Moschato = 0.2 km
+(111v-111r): Piraeus-Faliro = 0.2 km
+(206r-206a): Kallithea-Tavros = 0.2 km
+
+Se asume un peso de 0.2 km en cuanto al coste que supondría cambiar de línea
+incluyendo la distancia en llegar a la via y el tiempo de espera

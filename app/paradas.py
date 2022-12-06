@@ -38,7 +38,7 @@ listaParadas.append(bd.p203)
 listaParadas.append(bd.p204)
 listaParadas.append(bd.p109r)
 listaParadas.append(bd.p205)
-listaParadas.append(bd.p206)
+listaParadas.append(bd.p206r)
 listaParadas.append(bd.p207)
 listaParadas.append(bd.p208)
 listaParadas.append(bd.p209)
@@ -68,7 +68,7 @@ listaParadas.append(bd.p316)
 listaParadas.append(bd.p317)
 listaParadas.append(bd.p318)
 listaParadas.append(bd.p108a)
-listaParadas.append(bd.p206c)
+listaParadas.append(bd.p206a)
 
 def buscarParada(id):
     for parada in listaParadas:

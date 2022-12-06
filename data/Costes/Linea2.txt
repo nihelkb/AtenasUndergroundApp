@@ -1,0 +1,17 @@
+Coste de linea 2
+
+(201-202): Aghios Antonios-Sepolia = 1.3 km
+(202-111): Sepolia-Attiki = 1.1 km
+(111-203): Attiki-Larissa Station = 0.760 km
+(203-204): Larissa Station-Metaxourghio = 0.760 km
+(204-109): Metaxourghio-Omonia = 0.660 km
+(109-205): Omonia-Panepistimio = 0.640 km
+(205-206): Panepistimio-Syntagma = 0.660 km
+(206-207): Syntagma-Akropoli = 1.1 km
+(207-208): Akropoli-Sygrou - Fix = 0.530 km
+(208-209): Sygrou - Fix-Neos Kosmos = 1.2 km
+(209-210): Neos Kosmos-Aghios loannis = 0.580 km
+(210-211): Aghios loannis - Dafni = 0.830 km
+(211-212): Dafni-Aghios Dimitrios = 0.970 km
+
+Fuente: https://www.rome2rio.com/

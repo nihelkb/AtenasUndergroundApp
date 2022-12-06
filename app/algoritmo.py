@@ -3,9 +3,8 @@ import parada as par
 import math
 import bbdd as base
 
-
-
-def heuristic( coord1, coord2):
+# calcula la heuristica
+def heuristica( coord1, coord2):
 
     longitud1 = coord1.longitud
     longitud2 = coord2.longitud
@@ -16,100 +15,93 @@ def heuristic( coord1, coord2):
     return distancia
 
 
-#define fuction to return neighbor and its distance
-#from the passed node
-def get_neighbors(parada):
+# funcion que te devuelve las conexiones que tiene un parada
+def getVecinos(parada):
     lista = []
     for x in parada.conexiones:
        lista.append(x)
     return lista
 
-
-
-
 def aStarAlgo(parada_inicio, parada_fin):
-    nombre = parada_inicio.nombre
     open_set =[]
     open_set.append(parada_inicio)
     closed_set = set()
-    g = {}               #store distance from starting node
-    parents = {}         # parents contains an adjacency map of all nodes
-    #distance of starting node from itself is zero
-    g[parada_inicio] = 0
-    #parada_inicio is root node i.e it has no parent nodes
-    #so parada_inicio is set to its own parent node
-    parents[parada_inicio] = parada_inicio
+    distancia = {}       # Almacena la distancia desde el nodo inicial
+    padres = {}         # parents tiene el mapa de adayacencia
+    # La distancia desde el nodo raiz a si mismo es cero
+    distancia[parada_inicio] = 0
+    #parada_inicio es el nodo raiz por lo que no tiene padres
+    #parada_inicio es añadido con su propio nodo padre 
+    padres[parada_inicio] = parada_inicio
 
     while len(open_set) > 0:
         aux = None
-        #node with lowest f() is found 
+        # Nodo con el menor f() 
         for indice in open_set:
-            if aux == None or  g[indice] + heuristic(parada_inicio,parada_fin) < g[aux] + heuristic(parada_inicio,parada_fin):
+            if aux == None or  distancia[indice] + heuristica(parada_inicio,parada_fin) < distancia[aux] + heuristica(parada_inicio,parada_fin):
                 aux = indice
 
         if aux == parada_fin.nombre:
             pass
         else:
-            for (m, weight) in get_neighbors(aux):
+            for (valor, peso) in getVecinos(aux):
               
-                #nodes 'm' not in first and last set are added to first
-                #aux is set its parent
-                if m not in open_set and m not in closed_set:
-                    open_set.append(m)
-                    parents[m] = aux
-                    g[m] = g[aux] + weight
-                #for each node m,compare its distance from start i.e g(m) to the
-                #from start through aux node
+                #nodos 'valor' que no esten en el primer y ultimo set son añadido al primero
+                #aux se establece su padres
+                if valor not in open_set and valor not in closed_set:
+                    open_set.append(valor)
+                    padres[valor] = aux
+                    distancia[valor] = distancia[aux] + peso
+                #Para cada nodo valor comparamos la distancia desde el inicio
                 else:
-                    if g[m] > g[aux] + weight:
-                        #update g(m)
-                        g[m] = g[aux] + weight
-                        #change parent of m to aux
-                        parents[m] = aux
-                        #if m in closed set,remove and add to open
-                        if m in closed_set:
-                            closed_set.remove(m)
-                            open_set.append(m)
+                    if distancia[valor] > distancia[aux] + peso:
+                        #Se actualiza distancia(m)
+                        distancia[valor] = distancia[aux] + peso
+                        #Se cambia el padre de valor a aux
+                        padres[valor] = aux
+                        #Si valor esta en closed set, se elimina de y se añade a open
+                        if valor in closed_set:
+                            closed_set.remove(valor)
+                            open_set.append(valor)
         if aux == None:
-            print('Path does not exist!')
+            print('Path no existe!')
             return None 
         if aux == parada_fin:
             pass
         else:
 
-            for (m, weight) in get_neighbors(aux):
+            for (valor, peso) in getVecinos(aux):
               
-              #  print(m)
-                #nodes 'm' not in first and last set are added to first
-                #aux is set its parent
-                if m not in open_set and m not in closed_set:
-                    open_set.append(m)
+              # print(valor)
+                #nodos 'valor' que no esten en el primer set y ultimo set son añados que no esten en el first and last set son añadidos al set first
+                #Aux se estable su padre
+                if valor not in open_set and valor not in closed_set:
+                    open_set.append(valor)
                     
-                    parents[m] = aux
-                    g[m] = g[aux] + weight
-                #for each node m,compare its distance from start i.e g(m) to the
-                #from start through aux node
+                    padres[valor] = aux
+                    distancia[valor] = distancia[aux] + peso
+                #Para cada nodo valor comparamos la distancia desde el inicio
                 else:
-                    if g[m] > g[aux] + weight:
-                        #update g(m)
-                        g[m] = g[aux] + weight
-                        #change parent of m to aux
-                        parents[m] = aux
-                        #if m in closed set,remove and add to open
-                        if m in closed_set:
-                            closed_set.remove(m)
-                            open_set.append(m)
+                    if distancia[valor] > distancia[aux] + peso:
+                        #Se actualiza distancia(m)
+                        distancia[valor] = distancia[aux] + peso
+                        #Se cambia el padre de valor a aux
+                        padres[valor] = aux
+                         #Si valor esta en closed set, se elimina de y se añade a open
+                        if valor in closed_set:
+                            closed_set.remove(valor)
+                            open_set.append(valor)
         if aux == None:
-            print('Path does not exist!')
+            print('Path no existe!')
             return None
         
-        # if the current node is the parada_fin
-        # then we begin reconstructin the path from it to the parada_inicio
+        # Si el nodo es parada_fin
+        # Empezamos a reconstruir hasta parada_inicio y posteriormente lo invertimo para obtener el camino
         if aux == parada_fin:
             path = []
             aux2 = aux
             i = 0 
-            while parents[aux] != aux:
+            while padres[aux] != aux:
                 if  aux.id != aux2.id or i != 1:
                     path.append(aux)
                     i = 1
@@ -117,20 +109,14 @@ def aStarAlgo(parada_inicio, parada_fin):
                     path.remove(aux2)
                     path.append(aux)
                 aux2 = aux
-                aux = parents[aux]
+                aux = padres[aux]
             path.append(parada_inicio)
             path.reverse()
-            print('Path found: {}'.format(path))
+            print('Path encontrado: {}'.format(path))
             return path
-        # remove aux from the open_list, and add it to closed_list
-        # because all of his neighbors were inspected
+        # Eliminamos aux de open_list, y lo añadimos a closed_list
+        # porque todos los vecinos se han inspecionado
         open_set.remove(aux)
         closed_set.add(aux)
-    print('Path does not exist!')
+    print('Path no existe!')
     return None
-
-#aStarAlgo(base.p301,base.p124)
-
-
-
-

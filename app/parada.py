@@ -30,7 +30,7 @@ class parada:
     def añadirConexion(self, parada, distancia):
         self.conexiones.append((parada, distancia))
 
- #Comprueba que sus coordenadas esten en el circulo dado
+#  Comprueba que sus coordenadas esten en el circulo dado
     def is_in_circle (self, xp, yp):
         if self.coords == None:
             return False
