@@ -1,7 +1,7 @@
 # AtenasUndergroundApp
 Aplicación de busqueda de trayecto óptimo entre dos paradas del metro de Atenas. Asignatura de Inteligencia Artificial, ETSIINF UPM.
 
-## Table de Contenidos ##
+## Tabla de Contenidos ##
 
 * [Introducción](#introducción)
   * [Descargar código fuente](#descargar-código-fuente)
