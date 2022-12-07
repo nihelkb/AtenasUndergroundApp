@@ -111,3 +111,4 @@ Antes de cerrar la ventana del trayecto se pedirá al usuario una confirmación 
 Antes de cerrar el programa se pedirá al usuario una confirmación.
 
 ![Salir del programa](/img/Cerrarprograma.png "Salir del programa.")
+
