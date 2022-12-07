@@ -89,6 +89,7 @@ Al pulsar una parada, se marca como seleccionada y aparece el campo para selecci
 
 #### Selección segunda parada ####
 Al pulsar otra parada, se marca como seleccionada y aparecen las opciones de iniciar y de reiniciar la búsqueda. 
+
 ![Segunda parada](/img/SegundaParada.png "Segunda parada seleccionada.")
 
 ##### Caso de error 
