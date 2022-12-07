@@ -125,9 +125,8 @@ def iniciar():
     t.end_fill()
 
 def reiniciar():
-    global primera_parada
-    global segunda_parada
-
+    global primera_parada, segunda_parada
+    global a
     clean_elements()
 
     canvas.itemconfigure(line_input2, state='normal') # Seleccionar origen
