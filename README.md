@@ -69,7 +69,7 @@ Se puede ejecutar la aplicación de dos maneras:
 * Mediante el código fuente, que requiere la instalación previa de Python versión 3.10.7 o posterior.
 
 1. [Instalar Python](<https://www.python.org/downloads/>)
-2. [Descargar](<https://github.com/nihelkb/AtenasUndergroundApp/archive/refs/tags/1.0.zip>) el código fuente de la app
+2. [Descargar](#descargar-código-fuente) el código fuente de la app
 3. Descomprimir el archivo "AtenasUndergroundApp-1.0.zip"
 4. Situarse en el directorio mediante `cd AtenasUndergroundApp/`
 5. Ejecutar el mandato `python app/gui.py` para abrir la aplicación
