@@ -75,6 +75,38 @@ Se puede ejecutar la aplicación de dos maneras:
 5. Ejecutar el mandato `python app/gui.py` para abrir la aplicación
 
 ###  Cómo se usa la app ###
-El objetivo de la aplicación es encontrar una ruta óptima entre dos paradas del metro de Atenas. Para ello, habrá que elegir las paradas.
+El objetivo de la aplicación es encontrar una ruta óptima entre dos paradas del metro de Atenas. Para ello, primero será necesario seleccionar las paradas pulsando en el mapa interativo de la derecha de la ventana. 
 
-La selección de las paradas se hace pulsando en el mapa interativo de la derecha de la ventana. 
+#### Pantalla de Inicio ####
+La pantalla de inicio solo contiene el campo para seleccionar el origen.
+
+![Pantalla de inicio](/img/PantallaInicio.png "Pantalla de inicio.")
+
+#### Selección primera parada ####
+Al pulsar una parada, se marca como seleccionada y aparece el campo para seleccionar la segunda parada.
+
+![Primera parada](/img/PrimeraParada.png "Primera parada seleccionada.")
+
+#### Selección segunda parada ####
+Al pulsar otra parada, se marca como seleccionada y aparecen las opciones de iniciar y de reiniciar la búsqueda. 
+![Segunda parada](/img/SegundaParada.png "Segunda parada seleccionada.")
+
+##### Caso de error 
+Si se seleccionase como destino la misma parada seleccionada para el origen, aparecerá un error que pedirá al usuario cambiar la selección.
+
+![Misma parada](/img/Mismaparada.png "Seleccionada la misma parada.")
+
+#### Inicio de búsqueda ####
+Al darle al botón de iniciar, se despliega una nueva ventana en la que se mostrará el trayecto a seguir mediante una animación. La ventana principal quedará bloqueada.
+
+![Trayecto](/img/Trayecto.png "Trayecto óptimo.")
+
+#### Cierre de ventana ####
+Antes de cerrar la ventana del trayecto se pedirá al usuario una confirmación que informa de que los resultados se perderán. En caso de aceptar, se cerrará la ventana y se reiniciará la ventana volviendo a la pantalla de inicio.
+
+![Cierre de ventana](/img/Cerrarventana.png "Cierre de ventana emergente.")
+
+#### Cierre de programa ####
+Antes de cerrar el programa se pedirá al usuario una confirmación.
+
+![Salir del programa](/img/Cerrarprograma.png "Salir del programa.")
